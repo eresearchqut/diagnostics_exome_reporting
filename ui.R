@@ -17,7 +17,7 @@ pageWithSidebar(
     conditionalPanel(condition="input.conditionedPanels==1",
     helpText("Enter details for annotation run and report generation."),
     # default HomeDirectory location needs to be set on deployment
-    textInput("HomeDirectory", "Home Directory (location of data)", "/home/ubuntu/"), # NOTE: user defined default directory!!
+    textInput("HomeDirectory", "Home Directory (location of data)", "/data/"), # NOTE: user defined default directory!!
     bsTooltip("HomeDirectory", title = 'Please enter the directory where run results and report will be located.', 
               placement = "right", options = list(container = "body")),
     textInput("user", "User Name", ""),
@@ -51,7 +51,7 @@ pageWithSidebar(
               accept = c("text/csv", "text/comma-separated-values,text/plain", ".csv")),
               title = 'Select a text file to upload for tier 2. This is usually a list of genes involved in important related pathways', 
               placement = "right", options = list(container = "body")),
-    textInput("directory", "Output Directory Name", ""),
+    textInput("directory", "Output Directory Name", "/data/output/"),
     bsTooltip("directory", 
               title = 'Please enter an output directory. <b>Note: this directory will be used by VCF-DART Viewer to display results therefore it is good practice to include the same sample name you provided above as part of this.</b>', 
               placement = "right", options = list(container = "body")),

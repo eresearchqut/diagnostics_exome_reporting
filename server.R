@@ -51,7 +51,7 @@ function(input, output, session) {
       in_vcfFile <- input$vcfFile
       if (is.null(in_vcfFile))
         return()
-      file.copy(in_vcfFile$datapath, file.path(".", in_vcfFile$name))  # NOTE: this file.path needs to reflect the location of exome data (user edit)
+      file.copy(in_vcfFile$datapath, paste0(/data/vcfdart_data/', in_vcfFile$name))  # NOTE: this file.path needs to reflect the location of exome data (user edit)
     })
     
     # allow user upload of text QC file
@@ -59,7 +59,7 @@ function(input, output, session) {
       in_txtFile <- input$txtFile
       if (is.null(in_txtFile))
         return()
-      file.copy(in_txtFile$datapath, file.path(".", in_txtFile$name))  # NOTE: this file.path needs to reflect the location of exome data (user edit)
+      file.copy(in_txtFile$datapath, paste0('/data/vcfdart_data/', in_txtFile$name))  # NOTE: this file.path needs to reflect the location of exome data (user edit)
     })
     
     output$log <- renderText({

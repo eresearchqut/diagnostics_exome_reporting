@@ -44,7 +44,7 @@ VEP_DATA="/data/VEPdata/"
 FASTA_REF="/data/VEPdata/homo_sapiens/92_GRCh37/Homo_sapiens.GRCh37.75.dna.primary_assembly.fa.gz"
 DBNSFP="/data/dbNSFP/hg19/v2.9.3/dbNSFPv2.9.3_hg19_custom.txt.gz"
 # dir of sequence and quality/coverage data
-RAWDATA="/data2/vcfdart_data/*"
+RAWDATA="/data/vcfdart_data/*"
 ####
 echo ""
 ##
